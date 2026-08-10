@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 export default function CreateBlog() {
   const [title, setTitle] = useState("");
@@ -44,9 +44,9 @@ export default function CreateBlog() {
 
   return (
     <>
-      <Header />
-      <div className="max-w-full bg-[#FFF4EA]">
-        <div className="max-w-3xl mx-auto p-3 rounded-xl ">
+      <Navbar />
+      <div className="max-w-full h-[90vh] bg-[#FFF4EA]">
+        <div className="max-w-3xl mt-16 bg-[#FFF4EA] mx-auto p-3 rounded-xl">
           <h1 className="text-xl font-bold mb-8 text-center text-[#C96868]">
             Create Blog
           </h1>

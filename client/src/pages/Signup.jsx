@@ -29,7 +29,7 @@ export default function Signup() {
 
       console.log(response.data);
       alert("Signup successful");
-      navigate("/");
+      navigate("/login");
     } catch (err) {
       console.log(err);
       alert(err.response?.data?.message || "signup failed");

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 export default function BlogDetails() {
   const { id } = useParams();
@@ -66,9 +66,9 @@ export default function BlogDetails() {
 
   return (
     <>
-      <Header />
+      <Navbar />
       <div className="max-w-full bg-[#FFF4EA]">
-        <div className="max-w-4xl pb-10 pt-15 px-6 mx-auto">
+        <div className="max-w-4xl bg-[#FFF4EA] mt-10 pb-10 pt-15 px-6 mx-auto">
           {/* Cover Image */}
           <img
             src={`http://localhost:8000${blog.coverImageURL}`}
