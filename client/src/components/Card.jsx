@@ -4,7 +4,7 @@ const Card = ({ blog }) => {
   return (
     <div className="bg-[#FFF4EA] rounded-xl overflow-hidden border-[#C96868] border-2 mb-5">
       <img
-        src={`http://localhost:8000${blog.coverImageURL}`}
+        src={`${import.meta.env.VITE_API_URL}${blog.coverImageURL}`}
         alt={blog.title}
         className="w-full mt-4 py-3 px-3 h-56 object-contain"
       />

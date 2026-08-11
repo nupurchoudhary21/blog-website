@@ -30,7 +30,7 @@ export default function CreateBlog() {
       formData.append("body", body);
       formData.append("coverImage", coverImage);
 
-      const res = await axios.post("http://localhost:8000/blog", formData, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/blog`, formData, {
         withCredentials: true,
       });
       console.log(res.data);

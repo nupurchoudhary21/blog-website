@@ -13,7 +13,7 @@ export default function BlogDetails() {
   // Fetch blog and comments
   const fetchBlog = async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/blog/${id}`);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/blog/${id}`);
 
       console.log(res.data);
 
@@ -33,7 +33,7 @@ export default function BlogDetails() {
 
     try {
       const res = await axios.post(
-        `http://localhost:8000/blog/comment/${id}`,
+        `${import.meta.env.VITE_API_URL}/blog/comment/${id}`,
         {
           content,
         },
@@ -71,7 +71,7 @@ export default function BlogDetails() {
         <div className="max-w-4xl bg-[#FFF4EA] mt-10 pb-10 pt-15 px-6 mx-auto">
           {/* Cover Image */}
           <img
-            src={`http://localhost:8000${blog.coverImageURL}`}
+            src={`${import.meta.env.VITE_API_URL}${blog.coverImageURL}`}
             alt={blog.title}
             className="w-[55vh] object-contain rounded-xl shadow-md border-[#C96868] p-3 border-3"
           />

@@ -7,7 +7,7 @@ export default function Navbar() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/user/me", {
+      .get(`${import.meta.env.VITE_API_URL}/user/me`, {
         withCredentials: true,
       })
       .then((response) => {
@@ -20,7 +20,7 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:8000/user/logout", {
+      await axios.get(`${import.meta.env.VITE_API_URL}/user/logout`, {
         withCredentials: true,
       });
       setUser(null);

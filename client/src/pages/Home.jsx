@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchBlogs() {
       try {
-        const res = await axios.get("http://localhost:8000/blog");
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/blog`);
         setBlogs(res.data);
       } catch (err) {
         console.log(err);
