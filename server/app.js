@@ -27,7 +27,7 @@ app.use(checkForAuthenticationCookie("token"));
 app.use(express.static(path.resolve("./public")));
 app.use(cors({
     origin: "https://blog-website-xlem.onrender.com",
-    credentials:true,
+    credentials: true,
 }));
 
 app.get("/", (req,res) => {

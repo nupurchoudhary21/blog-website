@@ -24,7 +24,9 @@ export default function Signup() {
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/user/signup`,
-        formData,
+        formData, {
+          withCredentials: true
+        }
       );
 
       console.log(response.data);
