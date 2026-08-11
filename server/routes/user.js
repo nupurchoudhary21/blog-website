@@ -13,7 +13,7 @@ router.post("/signin" , async(req , res) => {
     httpOnly: true, 
     secure: true,
     sameSite:"none"
-   });
+   })
    .status(200)
    .json({
     message:"login successful",

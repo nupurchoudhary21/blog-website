@@ -41,7 +41,7 @@ export default function Navbar() {
             <div className="flex flex-cols items-center">
               <img
                 src={user.profileImageURL}
-                alt={user.fulName}
+                alt={user.fullName}
                 className="h-10 w-10 rounded-3xl mx-1"
               />
 
