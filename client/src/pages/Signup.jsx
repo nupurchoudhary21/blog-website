@@ -41,7 +41,7 @@ export default function Signup() {
   return (
     <>
       <Header />
-      <div className="min-h-160 bg-[#FFF4EA] flex items-center justify-center px-4 pt-0">
+      <div className="min-h-screen bg-[#FFF4EA] flex items-center justify-center px-4 pt-0">
         <div className="w-full max-w-md bg-[#C96868] rounded-3xl shadow-lg p-8">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-[#FFF4EA]">
